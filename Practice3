@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct Node 
+{
+    int data;
+    struct Node* next;
+} Node;
+Node* createNode(int value, int index) 
+{
+    Node* newNode = (Node*)malloc(sizeof(Node));
+    if (newNode == NULL) 
+    {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+    newNode->data = value;
+    newNode->next = NULL;
+    printf("Node %d created -> Address: %p, Value: %d\n", index, (void*)newNode, value);
+    return newNode;
+}
+void traverseList(Node* head) 
+{
+    Node* current = head;
+    int index = 0;
+    while (current != NULL) 
+    {
+        printf("Node %d -> Address: %p, Value: %d, Next: %p\n", 
+               index, (void*)current, current->data, (void*)current->next);
+        current = current->next;
+        index++;
+    }
+}
+Node* insertNode(Node* head, int position, int value) 
+{
+    Node* newNode = createNode(value, position);
+    if (position == 0) 
+    {
+        newNode->next = head;
+        return newNode;
+    }
+    Node* current = head;
+    for (int i = 0; i < position - 1 && current != NULL; i++) 
+    {
+        current = current->next;
+    }
+    if (current != NULL) 
+    {
+        newNode->next = current->next;
+        current->next = newNode;
+    }
+    return head;
+}
+Node* deleteNode(Node* head, int position) 
+{
+    if (head == NULL) return NULL;
+    Node* temp;
+    if (position == 0) 
+    {
+        temp = head;
+        head = head->next;
+        printf("Freeing Node at position %d -> Address: %p, Value: %d\n", position, (void*)temp, temp->data);
+        free(temp);
+        return head;
+    }
+    Node* current = head;
+    for (int i = 0; i < position - 1 && current->next != NULL; i++) 
+    {
+        current = current->next;
+    }
+    if (current->next != NULL) 
+    {
+        temp = current->next;
+        current->next = temp->next;
+        printf("Freeing Node at position %d -> Address: %p, Value: %d\n", position, (void*)temp, temp->data);
+        free(temp);
+    }
+    return head;
+}
+int main() 
+{
+    Node* head = createNode(10, 0);
+    head->next = createNode(20, 1);
+    head->next->next = createNode(30, 2);
+    printf("\nInitial linked list:\n");
+    traverseList(head);
+    // 插入節點
+    head = insertNode(head, 1, 15);
+    printf("\nAfter inserting 15 at position 1:\n");
+    traverseList(head);
+    // 刪除節點
+    head = deleteNode(head, 2);
+    printf("\nAfter deleting node at position 2:\n");
+    traverseList(head);
+    Node* current = head;
+    int index = 0;
+    while (current != NULL) 
+    {
+        Node* temp = current;
+        printf("Freeing Node %d -> Address: %p, Value: %d\n", index, (void*)temp, temp->data);
+        current = current->next;
+        free(temp);
+        index++;
+    }
+    return 0;
+}
