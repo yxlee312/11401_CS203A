@@ -1,4 +1,4 @@
-/*0
+/*
    ========================================
    hash_fn.hpp — declare your hash functions
    ========================================
@@ -9,7 +9,7 @@
    Development History:
     - 2025/11/17: Initial implementation
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    Developer: Yan-Xi Lee <leesteve0312@gmail.com>
  */
 #ifndef HASH_FN_HPP
 #define HASH_FN_HPP
