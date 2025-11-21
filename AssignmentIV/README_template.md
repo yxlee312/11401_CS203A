@@ -4,23 +4,65 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
-Developer: [Your Name]  
-Email: [Your email]  
+Developer: [Yan-Xi Lee]  
+Email: [leesteve0312@gmail.com]  
 
 ## My Hash Function
 ### Integer Keys 
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  I used the Multiplication Method for hashing integers.
+  The formula is:
+  h(k)=⌊m⋅frac(k⋅A)⌋
+  where frac(x)=x−⌊x⌋
+  Pseudocode (corresponds to my C/C++ code):
+  function myHashInt(key, m):
+  A = 0.7 // C version
+  OR
+  A = 0.35 // C++ version
+  prod = key * A
+  frac = prod - floor(prod)
+  index = floor(frac * m)
+  return index
+  Note:
+  I intentionally used different A values (0.7 in C and 0.35 in C++) to compare distribution behavior.
+  Both values satisfy 0 < A < 1, so they work correctly in the multiplication method.
   ```
-- Rationale: [Explain your design choices and how they minimize collisions.]
+- Rationale:[
+I chose the multiplication hashing method because:
+1. More uniform than using key % m
+Modulo hashing tends to create clustering when input keys follow patterns (e.g., consecutive integers).
+The multiplication method introduces a non-integer multiplier A, which adds useful randomness.
+2. Independent of table size
+This method works well whether m is prime or not.
+So it works consistently for m = 10, 11, and 37.
+3. Best distribution appeared when m = 11 and m = 37
+Especially when m = 37 (a prime), the results formed a nearly linear and uniform sequence.
+]
 
 ### Non-integer Keys
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  I used the Polynomial Rolling Hash method.
+  hash = ( hash ⋅ base + 𝑐 ) mod 𝑚
+  Pseudocode:
+  function myHashString(str, m):
+  hash = 0 base = 31 // C version
+  OR
+  base = 97 // C++ version
+  for each character c in str:
+  hash = (hash * base + ASCII(c)) % m
+  return hash
+  I used base = 31 for C and base = 97 for C++ to compare different multiplier effects.
   ```
-- Rationale: [Explain your approach and its effectiveness for non-integer keys.]
+- Rationale: [
+1. Polynomial hashing is widely used and effective
+It accumulates characters using multiplication, which reduces patterns and clusters.
+2. Base = 31 (C)
+A common choice in competitive programming and standard libraries.
+3. Base = 97 (C++)
+A larger base amplifies ASCII differences and reduces collisions for small datasets.
+]
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
@@ -31,6 +73,7 @@ Email: [Your email]
 - Standard: C23 and C++23
 
 ## Results
+Integer Keys
 | Table Size (m) | Index Sequence         | Observation              |
 |----------------|------------------------|--------------------------|
 | 10             | 1, 2, 3, 4, ...        | Pattern repeats every 10 |
