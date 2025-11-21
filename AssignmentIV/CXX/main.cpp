@@ -1,4 +1,4 @@
-/* 0
+/* 
    ========================================
    Hash Function Observation (C++ Version)
    ========================================
@@ -11,7 +11,7 @@
    Development History:
     - 2025/11/11: Initial implementation
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    Developer: Yan-Xi Lee <leesteve0312@gmail.com>
  */
 
 #include <iostream>
