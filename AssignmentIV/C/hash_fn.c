@@ -1,27 +1,38 @@
-/*0
+/*
    ========================================
    hash_fn.c — implement your hash functions
    ========================================
-
    Description:
     This file contains the hash functions for integer and string keys.
-
    Development History:
     - 2025/11/11: Initial implementation
     - 2025/11/17: Refactored to use hash_fn.h
-
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    - 2025/11/21: Complete final modification
+   Developer: Yan-Xi Lee <leesteve0312@gmail.com>
  */
-
 #include "hash_fn.h"
-
-int myHashInt(int key, int m) {
-    // TODO: replace with your own design
-    return key % m;  // division method example
+/*
+ Integer Hash Function
+ Method: Multiplication Method
+ */
+int myHashInt(int key, int m) 
+{
+    double A = 0.7;
+    double frac = (key * A) - (int)(key * A);
+    return (int)(m * frac);
 }
-
-int myHashString(const char* str, int m) {
+/*
+ String Hash Function
+ Method: Polynomial Rolling Hash
+ hash = (hash * 31 + current_char) % m
+ */
+int myHashString(const char* str, int m) 
+{
     unsigned long hash = 0;
-    // TODO: replace with your own design
-    return (int)(hash % m); // basic division method
+    while (*str) 
+    {
+        hash = (hash * 31 + (unsigned char)(*str)) % m;
+        str++;
+    }
+    return (int)hash;
 }
