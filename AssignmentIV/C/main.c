@@ -2,16 +2,13 @@
    ========================================
    Hash Function Observation (C Version)
    ========================================
-   
    Description:
    This program tests and displays the output of hash functions for integer
    and string keys using different table sizes. It utilizes the hash functions
    defined in "hash_fn.c".
-
    Development History:
     - 2025/11/11: Initial implementation
-
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    Developer: Yan-Xi Lee <leesteve0312@gmail.com>
  */
 
 #include <stdio.h>
