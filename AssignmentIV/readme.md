@@ -131,7 +131,7 @@ Integer Keys
   <img width="425" height="621" alt="image" src="https://github.com/user-attachments/assets/633f9ebc-8e10-47b3-87fb-c457c006ecbf" />
   <img width="377" height="615" alt="image" src="https://github.com/user-attachments/assets/fda85203-791d-4059-b8ff-624c458b3af0" />
   <img width="395" height="730" alt="image" src="https://github.com/user-attachments/assets/566f695b-e733-4605-a6b6-0c7623366927" />
-  <img width="372" height="364" alt="image" src="https://github.com/user-attachments/assets/61ed0a50-63e9-49ae-973b-5e358dcc6a5d" />
+  <img width="372" height="349" alt="image" src="https://github.com/user-attachments/assets/4df2aca4-e266-4b15-a764-d9946e74968a" />
   
 - Example output for integers:
   ```
