@@ -132,18 +132,6 @@ Integer Keys
   <img width="395" height="730" alt="image" src="https://github.com/user-attachments/assets/566f695b-e733-4605-a6b6-0c7623366927" />
   <img width="372" height="349" alt="image" src="https://github.com/user-attachments/assets/4df2aca4-e266-4b15-a764-d9946e74968a" />
   
-- Example output for integers:
-  ```
-  Hash table (m=10): [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-  Hash table (m=11): [10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  Hash table (m=37): [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, ...]
-  ```
-- Example output for strings:
-  ```
-  Hash table (m=10): ["cat", "dog", "bat", "cow", "ant", ...]
-  Hash table (m=11): ["fox", "cat", "dog", "bat", "cow", ...]
-  Hash table (m=37): ["bee", "hen", "pig", "fox", "cat", ...]
-  ```
 - Observations: For both integer and string hashing, the results produced by my program align with the expected theoretical behavior.
 In particular:
 The multiplication-method hash for integers generates more uniform results when the table size m is prime (especially 11 and 37).
