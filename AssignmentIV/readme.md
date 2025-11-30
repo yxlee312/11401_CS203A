@@ -18,7 +18,6 @@ Email: [leesteve0312@gmail.com]
   Pseudocode (corresponds to my C/C++ code):
   function myHashInt(key, m):
   A = 0.7 // C version
-  OR
   A = 0.35 // C++ version
   prod = key * A
   frac = prod - floor(prod)
