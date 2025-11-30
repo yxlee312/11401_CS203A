@@ -122,13 +122,11 @@ Integer Keys
   ```
 
 ### Result Snapshot
-  Hash function observation(C version)
   <img width="611" height="674" alt="image" src="https://github.com/user-attachments/assets/073087e0-5f0a-44d2-881a-457ccf9929be" />
   <img width="392" height="625" alt="image" src="https://github.com/user-attachments/assets/f0cc8bc8-6e7d-4372-b59a-d693e69dead9" />
   <img width="371" height="626" alt="image" src="https://github.com/user-attachments/assets/e4c6772f-191f-46be-a631-9a7356a40025" />
   <img width="413" height="737" alt="image" src="https://github.com/user-attachments/assets/04fe46dd-1494-41ea-8862-7f73a1adc7bb" />
   <img width="397" height="363" alt="image" src="https://github.com/user-attachments/assets/eb5769c7-5719-4eda-ab4c-742710d96096" />
-  Hash function observation(C++ version)
   <img width="621" height="674" alt="image" src="https://github.com/user-attachments/assets/f9a0296c-ceb4-49a3-b836-0d958a9b1418" />
   <img width="425" height="621" alt="image" src="https://github.com/user-attachments/assets/633f9ebc-8e10-47b3-87fb-c457c006ecbf" />
   <img width="377" height="615" alt="image" src="https://github.com/user-attachments/assets/fda85203-791d-4059-b8ff-624c458b3af0" />
