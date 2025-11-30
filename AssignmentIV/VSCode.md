@@ -1,4 +1,4 @@
-# Connect to GitHub with VSCode 0
+# Connect to GitHub with VSCode
 
 ## Prerequisites
 Before you begin, ensure you have the following:
