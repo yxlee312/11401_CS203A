@@ -122,7 +122,6 @@ Integer Keys
   ```
 
 ### Result Snapshot
-  ```
 <img width="611" height="674" alt="image" src="https://github.com/user-attachments/assets/073087e0-5f0a-44d2-881a-457ccf9929be" />
 
   ```
