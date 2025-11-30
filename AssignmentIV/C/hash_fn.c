@@ -9,6 +9,7 @@
     - 2025/11/17: Refactored to use hash_fn.h
     - 2025/11/21: Complete final modification
    Developer: Yan-Xi Lee <leesteve0312@gmail.com>
+   The program development process was partially assisted by ChatGPT.
  */
 #include "hash_fn.h"
 /*
