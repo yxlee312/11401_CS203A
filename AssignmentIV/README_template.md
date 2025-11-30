@@ -195,7 +195,6 @@ Integer Keys
   ...
   ```
 
-- Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
 - Example output for integers:
   ```
   Hash table (m=10): [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -208,14 +207,24 @@ Integer Keys
   Hash table (m=11): ["fox", "cat", "dog", "bat", "cow", ...]
   Hash table (m=37): ["bee", "hen", "pig", "fox", "cat", ...]
   ```
-- Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
+- Observations: For both integer and string hashing, the results produced by my program align with the expected theoretical behavior.
+In particular:
+The multiplication-method hash for integers generates more uniform results when the table size m is prime (especially 11 and 37).
+The polynomial rolling hash for strings shows fewer collisions with larger bases (base = 31 in C and base = 97 in C++).
+When m = 10, the distribution tends to form small repeating patterns, while m = 11 and m = 37 spread values more evenly.
+Using different constants (A = 0.7 for C, A = 0.35 for C++) produces slightly different shift patterns, which helps compare distribution quality.
+Overall, the observed outputs matched the expectations from multiplication hashing and polynomial hashing theory.
 
 ## Analysis
-- Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
-- Patterns or collisions: Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
-- Improvements: Use a prime table size and a well-designed hash function to enhance distribution.
+- Prime vs non-prime `m`: Prime table sizes (11, 37) consistently provide better distribution and fewer collisions for both integer and string hashing.
+- Patterns or collisions: m = 10 produces noticeable patterns, especially for integer hashing.
+Polynomial hashing reduces patterns more effectively when the base and modulus are relatively large.
+- Improvements: Use a prime table size whenever possible.
+Choose a base that fits the dataset size (larger base for strings when collisions matter).
+Multiplication hashing works well when 0 < A < 1 and is especially effective when combined with a prime table size.
 
 ## Reflection
-1. Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
-2. Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
-3. The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+1. This assignment showed that even simple hash functions behave differently depending on parameter choices such as the table size, multiplier A, and polynomial base.
+2. Prime table sizes consistently produced smoother and more uniform distributions, reducing collisions for both integer and string datasets.
+3. The comparison between C and C++ versions (different A and base values) revealed how small parameter changes can shift the entire hash distribution.
+4. Overall, designing an effective hash function requires balancing algorithm simplicity with careful tuning of constants to achieve good distribution performance.
