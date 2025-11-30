@@ -122,8 +122,13 @@ Integer Keys
   ```
 
 ### Result Snapshot
-<img width="611" height="674" alt="image" src="https://github.com/user-attachments/assets/073087e0-5f0a-44d2-881a-457ccf9929be" />
-
+  Hash function observation(C version)
+  <img width="611" height="674" alt="image" src="https://github.com/user-attachments/assets/073087e0-5f0a-44d2-881a-457ccf9929be" />
+  <img width="392" height="625" alt="image" src="https://github.com/user-attachments/assets/f0cc8bc8-6e7d-4372-b59a-d693e69dead9" />
+  <img width="371" height="626" alt="image" src="https://github.com/user-attachments/assets/e4c6772f-191f-46be-a631-9a7356a40025" />
+  <img width="413" height="737" alt="image" src="https://github.com/user-attachments/assets/04fe46dd-1494-41ea-8862-7f73a1adc7bb" />
+  <img width="397" height="363" alt="image" src="https://github.com/user-attachments/assets/eb5769c7-5719-4eda-ab4c-742710d96096" />
+  Hash function observation(C++ version)
   ```
   
 - Example output for integers:
