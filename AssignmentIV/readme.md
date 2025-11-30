@@ -122,79 +122,11 @@ Integer Keys
   ```
 
 ### Result Snapshot
-- Example output for integers:
   ```
-  === Hash Function Observation (C Version) ===
+<img width="611" height="674" alt="image" src="https://github.com/user-attachments/assets/073087e0-5f0a-44d2-881a-457ccf9929be" />
 
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      1
-  22      2
-  ...
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      10
-  22      0
-  ...
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      21
-  22      22
-  ...
-
-  === Hash Function Observation (C++ Version) ===
-
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      1
-  22      2
-  ...
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      10
-  22      0
-  ...
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      21
-  22      22
-  ...
   ```
-
-- Example output for strings:
-  ```
-  === String Hash (m = 10) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-
-  === String Hash (m = 11) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-
-  === String Hash (m = 37) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-  ```
-
+  
 - Example output for integers:
   ```
   Hash table (m=10): [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
