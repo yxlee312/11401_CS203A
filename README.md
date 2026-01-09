@@ -29,7 +29,8 @@ I use this repository to record the knowledge I have gained in this course, my l
 #### C
 #### CXX
 ### Contents of Data Structures:
-
+Based on teacher’s lecture notes, I used NotebookLM to help organize the knowledge from each unit, and after making my own revisions, I completed the study notes.
+Including the following contents.
 #### Array
 #### Linked list
 #### Stack and Queue
