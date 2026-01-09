@@ -22,3 +22,18 @@
 
 ## Repository description
 I use this repository to record the knowledge I have gained in this course, my learning journey, and even the challenges I have encountered, so that I can review everything anytime after the course ends.
+
+## Repository content
+### AssignmentIV: 
+
+#### C
+#### CXX
+### Contents of Data Structures:
+
+#### Array
+#### Linked list
+#### Stack and Queue
+#### Hashing
+#### Trees
+#### Heaps
+#### Graphs
