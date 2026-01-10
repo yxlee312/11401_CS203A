@@ -25,7 +25,7 @@ I use this repository to record the knowledge I have gained in this course, my l
 
 ## Repository content
 ### AssignmentIV: 
-
+According to the assignment requirements, various hashing methods were implemented using the following two programming languages.
 #### C
 #### CXX
 
@@ -40,7 +40,7 @@ Including the following contents.
 #### 6.Heaps
 #### 7.Graphs
 
-### Practice
+### Practice:
 Below are the programming practice tasks assigned by teacher to be completed after class.
 #### Practice1
 This program demonstrates dynamic memory allocation in C using malloc, realloc, and free.
